@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The STEMSphere : Blogs</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="../../img/icon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="../../lib/animate/animate.min.css" rel="stylesheet" />
+    <link
+      href="../../lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet" />
+
+    <!-- Firebase SDK (Modular) -->
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+      import { getFirestore, doc, setDoc, getDoc, increment } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+
+      // Replace with your actual Firebase configuration
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      };
+
+      // Initialize Firebase
+      try {
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Function to record and display page view
+        async function handlePageView() {
+          const pageId = window.location.pathname; // Unique identifier for the page
+          try {
+            // Increment view count
+            await setDoc(doc(db, "pageViews", pageId), {
+              views: increment(1)
+            }, { merge: true });
+
+            // Fetch and display view count
+            const docSnap = await getDoc(doc(db, "pageViews", pageId));
+            const views = docSnap.exists() ? docSnap.data().views || 0 : 0;
+            document.getElementById("viewCount").textContent = `Views: ${views}`;
+          } catch (error) {
+            console.error("Error handling page view:", error);
+            document.getElementById("viewCount").textContent = "Views: Unavailable";
+          }
+        }
+
+        // Record view when page loads
+        window.addEventListener("load", handlePageView);
+      } catch (error) {
+        console.error("Firebase initialization failed:", error);
+        document.getElementById("viewCount").textContent = "Views: Unavailable";
+      }
+    </script>
+
+    <style>
+      /* Article-specific styles */
+      article {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      article img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+      }
+
+      article h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #57475b;
+        margin-bottom: 1rem;
+      }
+
+      article h2 {
+        font-size: 2rem;
+        color: #070707;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      article h3 {
+        font-size: 1.5rem;
+        color: #57475b;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      article h4 {
+        font-size: 1.25rem;
+        color: #57475b;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      article p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      article ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      article table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+      }
+
+      article th,
+      article td {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      article th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      article pre {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+      }
+
+      .article-header {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .author-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .author-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      .author-details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .author-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .article-meta {
+        font-size: 0.875rem;
+        color: #666;
+      }
+
+      .article-cta {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 0.01rem;
+      }
+
+      .cta-link {
+        text-decoration: underline;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .html-logo {
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        width: 200px;
+        height: auto;
+      }
+
+      .view-count {
+        font-size: 1rem;
+        color: #666;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+    >
+      <a
+        href="../../../STEMSphere Official Website/"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+      >
+        <p class="m-0 fw-" style="font-size: 25px">
+          <img src="../../img/icon.png" alt="" height="70px" />
+          <span
+            style="
+              color: #4b8adc;
+              font-weight: 500;
+              font-family: 'Lato', sans-serif;
+            "
+            >STEMSphere</span
+          >
+        </p>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="./" class="nav-item nav-link"
+            ><i class="fa-solid fa-house"></i>  Home</a
+          >
+          <a href="../../about/" class="nav-item nav-link"
+            ><i class="fa-solid fa-info-circle"></i>  About</a
+          >
+          <a href="../../blogs/" class="nav-item nav-link active"
+            ><i class="fa-solid fa-book-open-reader"></i>  Blogs</a
+          >
+          <a href="../../community/" class="nav-item nav-link"
+            ><i class="fa-solid fa-comments"></i>  Community</a
+          >
+          <a href="../../contact/" class="nav-item nav-link"
+            ><i class="fa-solid fa-hands-helping"></i>  Contact</a
+          >
+          <a href="login.html" class="nav-item nav-link" target="_blank">
+            <i class="fa fa-graduation-cap"></i>
+            <span class="nav-text">Learn</span>
+          </a>
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <style>
+      /* Hide text by default (for desktop) */
+      .nav-text {
+        display: none;
+      }
+
+      /* Show text on mobile screens */
+      @media (max-width: 991px) {
+        .nav-text {
+          display: inline;
+          margin-left: 8px;
+        }
+      }
+    </style>
+
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <main>
+      <article>
+        <div class="article-header">
+          <div class="author-info">
+            <img src="blogs/3.jpg" alt="Author Image" class="author-image" />
+            <div class="author-details">
+              <span class="author-name">Lena Sernoff</span>
+              <span class="article-meta">Student</span>
+            </div>
+          </div>
+          <p class="article-cta">March 25, 2025</p>
+          <p class="article-cta">ဆောင်းပါး</p>
+          <span class="yellow-decor"></span>
+          <p class="view-count" id="viewCount">Views: Loading...</p>
+        </div>
+
+        <h1>အွန်လိုင်း လောင်းကစားဝက်ဘ်ဆိုက် တွေကိုဘယ်လိုလုပ်လဲ။</h1>
+        <p>
+          ပထမဦးဆုံး ဝက်ဆိုက် ဖန်တီးရာမှာ ဲ
+        </p>
+      </article>
+    </main>
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-container">
+        <div class="icon-row">
+          <a
+            href="https://www.facebook.com/TheSTEMSphere"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://t.me/stemspheremm"
+            target="_blank"
+            aria-label="Telegram"
+            ><i class="fab fa-telegram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/stem-sphere/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://youtube.com/@thestemsphere"
+            target="_blank"
+            aria-label="YouTube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a
+            href="https://discord.com/invite/8w9695ggBF"
+            target="_blank"
+            aria-label="Discord"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+        </div>
+        <div class="icon-row">
+          <a
+            href="https://www.instagram.com/stemspheremm/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://x.com/stemsphere" target="_blank" aria-label="X"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a
+            href="https://medium.com/@stemsphere"
+            target="_blank"
+            aria-label="Medium"
+            ><i class="fab fa-medium"></i
+          ></a>
+          <a
+            href="https://github.com/stem-sphere"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@stemsphere"
+            target="_blank"
+            aria-label="TikTok"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a
+          >© 2025 The STEMSphere. All rights reserved. Developed by Aung Wai
+          Phyo</a
+        >
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

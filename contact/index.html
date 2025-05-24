@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The STEMSphere : Contact</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="../img/icon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+    <link
+      href="../lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+    >
+      <a
+        href="../../STEMSphere Official Website/"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+      >
+        <p class="m-0 fw-" style="font-size: 25px">
+          <img src="../img/icon.png" alt="" height="70px" />
+          <span
+            style="
+              color: #4b8adc;
+              font-weight: 500;
+              font-family: 'Lato', sans-serif;
+            "
+            >STEMSphere</span
+          >
+        </p>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="../../STEMSphere Official Website/index.html" class="nav-item nav-link"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a href="../about/index.html" class="nav-item nav-link"
+            ><i class="fa-solid fa-info-circle"></i> About</a
+          >
+          <a href="../blogs/index.html" class="nav-item nav-link"
+            ><i class="fa-solid fa-book-open-reader"></i> Blogs</a
+          >
+          <a href="../community/index.html" class="nav-item nav-link"
+            ><i class="fa-solid fa-comments"></i> Community</a
+          >
+          <a href="../contact/index.html" class="nav-item nav-link active"
+            ><i class="fa-solid fa-hands-helping"></i> Contact</a
+          >
+          <a href="login.html" class="nav-item nav-link" target="_blank">
+            <i class="fa fa-graduation-cap"></i>
+            <span class="nav-text">Learn</span>
+          </a>
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <style>
+      /* Hide text by default (for desktop) */
+      .nav-text {
+        display: none;
+      }
+
+      /* Show text on mobile screens */
+      @media (max-width: 991px) {
+        .nav-text {
+          display: inline;
+          margin-left: 8px;
+        }
+      }
+
+      .instructions-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .instructions-container {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 5rem 5rem;
+        }
+      }
+
+      .instruction-box {
+        position: relative;
+      }
+
+      .instruction-yellow-bg {
+        position: absolute;
+        top: 1rem;
+        left: -1rem;
+        background-color: #fcb615;
+        border-radius: 0.5rem;
+        height: 25rem;
+        width: 100%;
+        z-index: 0;
+      }
+
+      .instruction-content {
+        position: absolute;
+        padding: 3rem;
+        background-color: #57475b;
+        color: white;
+        border-radius: 0.5rem;
+        height: 25rem;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .instruction-content h2 {
+        font-size: 1.75rem;
+        font-weight: 900;
+      }
+
+      .instruction-content p {
+        margin-top: 1.25rem;
+        font-size: 1rem;
+        line-height: 2rem;
+      }
+
+      .owl-image {
+        position: absolute;
+        top: -11.8rem;
+        left: 2.5rem;
+        height: 24rem;
+      }
+
+      .bank-info h2 {
+        color: #fcb615;
+        font-size: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .bank-item {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+      }
+
+      .bank-item img {
+        width: 7rem;
+      }
+
+      .bank-item-label {
+        color: #57475b;
+        font-size: 0.875rem;
+      }
+
+      .bank-item-number {
+        color: #57475b;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .page-header {
+        margin-bottom: 60px !important;
+      }
+
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        gap: 30px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      .contact-left {
+        width: 100%;
+        max-width: 400px;
+        background-color: white;
+        border: 4px solid #a78bfa;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contact-image {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .contact-right {
+        width: 100%;
+        max-width: 500px;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #6b7280;
+        box-sizing: border-box;
+      }
+
+      .contact-form input[name="subject"] {
+        margin-bottom: 20px;
+      }
+
+      .contact-form textarea {
+        resize: none;
+        height: 120px;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 14px;
+        background-color: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .contact-form button:hover {
+        background-color: #11388d;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #4b5563;
+      }
+
+      .contact-info div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-info svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .contact-info .email-info svg {
+        color: #7f1d1d;
+      }
+
+      .contact-info .phone-info svg {
+        color: #0d9488;
+      }
+
+      .contact-info .office-info svg {
+        color: #051ab3;
+      }
+
+      @media (min-width: 1008px) {
+        .contact-section {
+          flex-direction: row;
+          gap: 40px;
+          padding: 0;
+        }
+
+        .contact-left,
+        .contact-right {
+          width: 50%;
+        }
+
+        .form-row {
+          flex-direction: row;
+          gap: 20px;
+          margin-bottom: 20px;
+        }
+
+        .form-row input {
+          width: 50%;
+        }
+
+        .contact-info {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 20px;
+        }
+      }
+
+      .instruction-wrapper {
+        margin: 0;
+      }
+
+      .instruction-bank-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .instruction-text-box {
+        flex: 1;
+        color: #000;
+        padding: 1.5rem;
+        min-width: 300px;
+      }
+
+      .instruction-text-box h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .instruction-text-box p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        text-align: center;
+      }
+
+      .bank-image-box {
+        flex: 1;
+        text-align: center;
+        min-width: 300px;
+      }
+
+      .bank-image-box img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 1068px) {
+        .instruction-bank-container {
+          flex-direction: column;
+          padding: 1rem;
+        }
+
+        .instruction-text-box,
+        .bank-image-box {
+          padding: 0.5rem;
+        }
+
+        .instruction-text-box h2 {
+          font-size: 1.5rem;
+        }
+
+        .instruction-text-box p {
+          font-size: 0.95rem;
+        }
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 1000;
+      }
+    </style>
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1 class="display-3 text-white animated slideInDown">
+              Contact Us
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                  <a
+                    class="text-white"
+                    href="../../STEMSphere Official Website/"
+                    >Home</a
+                  >
+                </li>
+                <li
+                  class="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  Contact
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h1 class="mb-5 bg-white text-center px-3" style="color: #000000">
+            Contact Us
+          </h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+            <p class="mb-4" style="text-align: justify">
+              We are more than just an e-learning platform. Whether you want to
+              learn more about our activities, offer support, or simply stay
+              connected, we are happy to help. Feel free to contact us anytime
+              via email, phone, or especially through our Facebook Page
+              Messenger. We welcome your questions, feedback, and collaboration.
+              Do not forget to like, follow, subscribe, and join us on our
+              social platforms to stay updated and connected with our growing
+              STEM community!
+            </p>
+          </div>
+        </div>
+        <section class="contact-section">
+          <!-- Left Section (Image) -->
+          <div class="contact-left">
+            <img src="../img/contact.jpg" alt="Contact Image" class="contact-image" />
+          </div>
+          <!-- Right Section (Form) -->
+          <div class="contact-right">
+            <div class="contact-form">
+              <form action="https://formsubmit.co/info.thestemsphere@gmail.com" method="POST">
+                <div class="form-row">
+                  <input type="text" name="name" placeholder="Your Name" required />
+                  <input type="email" name="email" placeholder="Your Email" required />
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required />
+                <textarea name="message" placeholder="Message" required></textarea>
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="../contact/thank-you.html"
+                />
+                <input
+                  type="hidden"
+                  name="_autoresponse"
+                  value="Thank you for your message! We'll get back to you soon."
+                />
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <div class="phone-info">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <span>+959778354932</span>
+              </div>
+              <div class="email-info">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+                <span>info.thestemsphere@gmail.com</span>
+              </div>
+              <div class="office-info">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+                <span>Yangon</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Donation Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <h2
+          style="
+            text-align: center;
+            color: #000000;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+          "
+        >
+          Support Us
+        </h2>
+        <div class="instruction-wrapper">
+          <div class="instruction-bank-container">
+            <!-- Instruction Text -->
+            <div class="instruction-text-box">
+              <h2>Instruction</h2>
+              <p style="text-align: justify; margin-top: 30px">
+                You can donate to STEMSphere via Wave Pay and KBZ Pay using the
+                details shown in the image beside. If you would like to receive
+                a digital certificate as a token of appreciation for your
+                generous support, please take time to fill out
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfFdCHsPXfbLnRFcXViZCAWFwOVXJ0RwH5kOIt75lqrNRca2Q/viewform"
+                  target="_blank"
+                  >this form.</a
+                >
+                For other donation options, certificate issues, or to learn more
+                about our work, feel free to reach out via Facebook Page
+                Messenger or Email. Thank you for being part of our mission to
+                empower youth through STEM education!
+              </p>
+            </div>
+            <!-- Bank Info Image -->
+            <div class="bank-image-box">
+              <img src="../img/donation.jpg" alt="Bank Info" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Donation End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-container">
+        <div class="icon-row">
+          <a
+            href="https://www.facebook.com/TheSTEMSphere"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://t.me/stemspheremm"
+            target="_blank"
+            aria-label="Telegram"
+            ><i class="fab fa-telegram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/stem-sphere/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://youtube.com/@thestemsphere"
+            target="_blank"
+            aria-label="YouTube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a
+            href="https://discord.com/invite/8w9695ggBF"
+            target="_blank"
+            aria-label="Discord"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+        </div>
+        <div class="icon-row">
+          <a
+            href="https://www.instagram.com/stemspheremm/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://x.com/stemsphere" target="_blank" aria-label="X"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a
+            href="https://medium.com/@stemsphere"
+            target="_blank"
+            aria-label="Medium"
+            ><i class="fab fa-medium"></i
+          ></a>
+          <a
+            href="https://github.com/stem-sphere"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@stemsphere"
+            target="_blank"
+            aria-label="TikTok"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a
+          >© 2025 The STEMSphere. All rights reserved. Developed by Aung Wai
+          Phyo</a
+        >
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Google Translate -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
