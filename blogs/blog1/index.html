@@ -53,53 +53,6 @@
     <!-- Template Stylesheet -->
     <link href="../../css/style.css" rel="stylesheet" />
 
-    <!-- Firebase SDK (Modular) -->
-    <script type="module">
-      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-      import { getFirestore, doc, setDoc, getDoc, increment } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
-
-      // Replace with your actual Firebase configuration
-      const firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID"
-      };
-
-      // Initialize Firebase
-      try {
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        // Function to record and display page view
-        async function handlePageView() {
-          const pageId = window.location.pathname; // Unique identifier for the page
-          try {
-            // Increment view count
-            await setDoc(doc(db, "pageViews", pageId), {
-              views: increment(1)
-            }, { merge: true });
-
-            // Fetch and display view count
-            const docSnap = await getDoc(doc(db, "pageViews", pageId));
-            const views = docSnap.exists() ? docSnap.data().views || 0 : 0;
-            document.getElementById("viewCount").textContent = `Views: ${views}`;
-          } catch (error) {
-            console.error("Error handling page view:", error);
-            document.getElementById("viewCount").textContent = "Views: Unavailable";
-          }
-        }
-
-        // Record view when page loads
-        window.addEventListener("load", handlePageView);
-      } catch (error) {
-        console.error("Firebase initialization failed:", error);
-        document.getElementById("viewCount").textContent = "Views: Unavailable";
-      }
-    </script>
-
     <style>
       /* Article-specific styles */
       article {
@@ -107,73 +60,62 @@
         margin: 0 auto;
         padding: 2rem;
       }
-
       article img {
         max-width: 100%;
         height: auto;
         display: block;
         margin: 1rem auto;
       }
-
       article h1 {
         font-size: 2.5rem;
         font-weight: 900;
         color: #57475b;
         margin-bottom: 1rem;
       }
-
       article h2 {
         font-size: 2rem;
         color: #070707;
         margin-top: 2rem;
         margin-bottom: 1rem;
       }
-
       article h3 {
         font-size: 1.5rem;
         color: #57475b;
         margin-top: 1.5rem;
         margin-bottom: 0.75rem;
       }
-
       article h4 {
         font-size: 1.25rem;
         color: #57475b;
         margin-top: 1rem;
         margin-bottom: 0.5rem;
       }
-
       article p {
         font-size: 1rem;
         line-height: 1.8;
         color: #333;
         margin-bottom: 1rem;
       }
-
       article ul {
         list-style-type: disc;
         padding-left: 2rem;
         margin-bottom: 1rem;
       }
-
       article table {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 1rem;
       }
-
       article th,
       article td {
         border: 1px solid #ddd;
         padding: 0.75rem;
         text-align: left;
       }
-
       article th {
         background-color: #f8f9fa;
         font-weight: bold;
       }
-
       article pre {
         background-color: #f8f9fa;
         padding: 1rem;
@@ -181,53 +123,44 @@
         overflow-x: auto;
         margin-bottom: 1rem;
       }
-
       .article-header {
         position: relative;
         margin-bottom: 2rem;
       }
-
       .author-info {
         display: flex;
         align-items: center;
         margin-bottom: 1rem;
       }
-
       .author-image {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         margin-right: 1rem;
       }
-
       .author-details {
         display: flex;
         flex-direction: column;
       }
-
       .author-name {
         font-size: 1rem;
         font-weight: 600;
         color: #333;
       }
-
       .article-meta {
         font-size: 0.875rem;
         color: #666;
       }
-
       .article-cta {
         font-size: 1rem;
         color: #333;
         margin-bottom: 0.01rem;
       }
-
       .cta-link {
         text-decoration: underline;
         color: #333;
         font-weight: 500;
       }
-
       .html-logo {
         position: absolute;
         bottom: -50px;
@@ -235,11 +168,17 @@
         width: 200px;
         height: auto;
       }
-
-      .view-count {
+      /* View Counter Styles */
+      .view-counter {
+        font-family: 'Heebo', sans-serif;
         font-size: 1rem;
-        color: #666;
-        margin-top: 1rem;
+        color: #57475b;
+        font-weight: 500;
+        margin-top: 0.5rem;
+      }
+      .view-counter .counter {
+        font-weight: bold;
+        color: #4a90e2;
       }
     </style>
   </head>
@@ -275,19 +214,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
           <a href="./" class="nav-item nav-link"
-            ><i class="fa-solid fa-house"></i>  Home</a
+            ><i class="fa-solid fa-house"></i> Home</a
           >
           <a href="../../about/" class="nav-item nav-link"
-            ><i class="fa-solid fa-info-circle"></i>  About</a
+            ><i class="fa-solid fa-info-circle"></i> About</a
           >
           <a href="../../blogs/" class="nav-item nav-link active"
-            ><i class="fa-solid fa-book-open-reader"></i>  Blogs</a
+            ><i class="fa-solid fa-book-open-reader"></i> Blogs</a
           >
           <a href="../../community/" class="nav-item nav-link"
-            ><i class="fa-solid fa-comments"></i>  Community</a
+            ><i class="fa-solid fa-comments"></i> Community</a
           >
           <a href="../../contact/" class="nav-item nav-link"
-            ><i class="fa-solid fa-hands-helping"></i>  Contact</a
+            ><i class="fa-solid fa-hands-helping"></i> Contact</a
           >
           <a href="login.html" class="nav-item nav-link" target="_blank">
             <i class="fa fa-graduation-cap"></i>
@@ -303,7 +242,6 @@
       .nav-text {
         display: none;
       }
-
       /* Show text on mobile screens */
       @media (max-width: 991px) {
         .nav-text {
@@ -340,14 +278,252 @@
           </div>
           <p class="article-cta">March 25, 2025</p>
           <p class="article-cta">ဆောင်းပါး</p>
+          <!-- View Counter Start -->
+          <div class="view-counter">
+            <span>Page Views: </span><span class="counter">0</span>
+          </div>
+          <!-- View Counter End -->
           <span class="yellow-decor"></span>
-          <p class="view-count" id="viewCount">Views: Loading...</p>
         </div>
 
         <h1>အွန်လိုင်း လောင်းကစားဝက်ဘ်ဆိုက် တွေကိုဘယ်လိုလုပ်လဲ။</h1>
         <p>
-          ပထမဦးဆုံး ဝက်ဆိုက် ဖန်တီးရာမှာ ဲ
+          ပထမဦးဆုံး ဝက်ဆိုက် ဖန်တီးရာမှာ လိုအပ်တဲ့ နည်းပညာအချက်လက်နဲ့
+          နောက်ပိုင်း သုံးဆွဲသူတွေအတွက် ဘယ်လိုဆိုးကျိုး ဖြစ်ပေါ်လဲ
+          အသေးစိတ်ပြောပေးမယ်။ အဆုံးထိဖတ်ပေးဖို့ တောင်းဆိုပါတယ်။
         </p>
+
+        <section>
+          <!-- Front-End Image -->
+          <img
+            src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
+            alt="HTML and CSS logos representing Front-End development"
+            width="600"
+          />
+          <p>
+            ဝက်ဆိုက် ဖန်တီးဖို့က လိုအပ်တဲ့ နည်းပညာက အားလုံးသိတဲ့အတိုင်း
+            Front-End နဲ့ Back-End ရယ် သုံးဆွဲသူတွေရဲ့
+            အချက်အလက်တွေကိုသိမ်းဆည်းထားတဲ့ Database ရယ်ဆိုပြီး သုံးခုရှိမယ်။
+          </p>
+
+          <h3>Front-End နည်းပညာ</h3>
+          <p>
+            Front-End ပိုင်းက သုံဆွဲသူတွေဘက်မှာ ကြည့်လို့ရမယ့် Design
+            ပုံစံတွေနဲ့လာမယ်။ အသုံးပြုတဲ့ Tools တွေကတော့ HTML, Css, JavaScript
+            တို့နဲ့ အပြန်အလှန်အကျိုးသက်ရောက်ဖို့ React.js ဒါမဟုတ် Vue.js တို့နဲ့
+            ဖွဲ့စည်းထားမယ်။
+          </p>
+
+          <h3>Back-End နည်းပညာ</h3>
+          <img
+            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
+            alt="Server room for Back-End development"
+            width="600"
+          />
+          <p>
+            Back-End အပိုင်းကတော့ Developer တွေနဲ့ပဲ ဆိုင်သွားပြီ။
+            သုံးဆွဲသူတွေဘက်က ဘာမှလုပ်လို့ရမှာမဟုတ်ဘူး။ အသုံးဆွဲသူတွေ
+            လုပ်ဆောင်ပုံတွေနဲ့ အချက်အလက်တွေကို Database ဆီပေးပို့တဲ့အရာလည်း
+            ဖြစ်တယ်။ အသုံးပြုတဲ့ tools အများစုကတော့ Node.js, Ruby, Java နဲ့
+            Python (Django, Flask)။
+          </p>
+
+          <h3>Database နည်းပညာ</h3>
+          <img
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"
+            alt="Infographic comparing Relational vs Non-Relational databases"
+            width="800"
+          />
+          <p>
+            Database ကကြတော့ Back-End ကနေပေးပို့လိုက်ပြီဆိုရင် သူကသိမ်းဆည်းဖို့
+            နေရာတစ်ခု။ အွန်လိုင်း အလောင်းကစား Website မှာဆိုရင် သုံးစွဲသူရဲ့
+            ကိုယ်ရေးကိုယ်တာအချက်အလက်၊ ငွေသွင်း၊ ငွေထုတ် မှတ်တမ်း၊ ငွေကြေး
+            တွေပါမယ်။ သူမှာ Relational Database နဲ့ Non-Relational Database
+            ဆိုပြီး နှစ်မျိုးရှိသေးတယ်။
+          </p>
+
+          <h4>Relational vs Non-Relational Database</h4>
+          <p>ကွဲပြားပုံက:</p>
+          <ul>
+            <li>
+              <strong>Relational Database</strong>: Column headers (ဥပမာ - Name,
+              Email, age) အဲ့တာတွေရဲ့အောက်က မှ Data (rows) မှာ format
+              နဲ့ထည့်ရတယ်။
+            </li>
+            <li>
+              <strong>Non-Relational Database</strong>:
+              ဘာပုံစံဖြစ်ဖြစ်သိမ်းလို့ရတယ်။ (Structure တွေမကန့်သတ်ဘူး)
+              တစ်ယောက်နဲ့တစ်ယောက်က Data format မတူလို့ရတယ်။ JSON စနစ်နဲ့
+              သိမ်းတာများတယ်။ ထည့်ချင်တာထည့်၊ မရှိတာကျော်သွား
+            </li>
+          </ul>
+
+          <h4>Relational Database Example</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Aung Aung</td>
+                <td>aung@gmail.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Hla Hla</td>
+                <td>hla@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Non-Relational Database Example</h4>
+          <pre>
+{
+    "name": "Aung Aung",
+    "email": "aung@gmail.com",
+    "age": 25
+}
+{
+    "name": "Hla Hla",
+    "phone": "0912345678",
+    "address": "Yangon"
+}
+          </pre>
+
+          <p>
+            အွန်လိုင်းအလောင်းကစား ဝက်ဆိုက်တွေမှာကြတော့ Relational Database (SQL)
+            သုံးတာများတယ်။
+          </p>
+          <h4>အကြောင်းရင်းများ</h4>
+          <ul>
+            <li>
+              ငွေကြေး / user account / bet history တွေကို သေသပ်စနစ်တကျ
+              သိမ်းဖို့လိုတယ်
+            </li>
+            <li>Accuracy (မှန်ကန်မှု) အလွန်အရေးကြီးတယ်</li>
+            <li>
+              SQL DB တွေက transaction-based ဖြစ်လို့ သွင်းထုတ်လုပ်ငန်းစဉ်တွေကို
+              ခိုင်မာစွာထိန်းချုပ်နိုင်တယទူး
+            </li>
+          </ul>
+
+          <h4>အသုံးများသော SQL Databases</h4>
+          <ul>
+            <li>PostgreSQL (open-source, performance & security ဗလိမ့်)</li>
+            <li>MySQL / MariaDB (ကျယ်ပြန့်ပြီး lightweight)</li>
+            <li>Oracle (စီးပွားရေးအဆင့် မြင့်မားတဲ့လူကြိုက်များတယ်)</li>
+            <li>Microsoft SQL Server (အများစု Windows Server များအတွက်)</li>
+          </ul>
+
+          <h4>NoSQL Database အသုံးပြုမှု</h4>
+          <p>တစ်ခါတစ်ရံ NoSQL DB သုံးတာလဲ တွေရတယ်။ အထူးသဖြင့်:</p>
+          <ul>
+            <li>Realtime leaderboard</li>
+            <li>Logs / tracking data (user behavior, traffic log)</li>
+            <li>Game state caching</li>
+          </ul>
+
+          <h4>အသုံးများသော NoSQL Databases</h4>
+          <ul>
+            <li>MongoDB – Flexible data, JSON-like structure</li>
+            <li>Redis – အမြန်ဆုံး caching, in-memory database</li>
+            <li>Cassandra – Big data & high availability</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Tech Stack အကျဉ်းချုပ်</h2>
+          <img
+            src="https://images.unsplash.com/photo-1548092372-0d5bd4086c04"
+            alt="Diagram of tech stack with Frontend, Backend, and Database components"
+            width="800"
+          />
+          <table>
+            <thead>
+              <tr>
+                <th>Part</th>
+                <th>Example Tech</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frontend</td>
+                <td>React, Angular, Vue.js</td>
+              </tr>
+              <tr>
+                <td>Backend</td>
+                <td>Node.js, PHP (Laravel), Java (Spring), Python (Django)</td>
+              </tr>
+              <tr>
+                <td>Database (Main)</td>
+                <td>PostgreSQL, MySQL, Oracle</td>
+              </tr>
+              <tr>
+                <td>Database (Supporting)</td>
+                <td>Redis (caching), MongoDB (logging), Cassandra</td>
+              </tr>
+              <tr>
+                <td>Authentication & Security</td>
+                <td>JWT, OAuth, 2FA, Encryption</td>
+              </tr>
+              <tr>
+                <td>Payment Integration</td>
+                <td>Stripe, PayPal, Crypto wallets, Bank API</td>
+              </tr>
+              <tr>
+                <td>Local Payment</td>
+                <td>Kpay, Wave pay, KBZ Bank</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>ဆာဗာနဲ့ Hosting</h2>
+          <img
+            src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg"
+            alt="Cloud server infrastructure for hosting"
+            width="800"
+          />
+          <p>
+            ဆာဗာဆိုတာက ခင်များတို့ အခုဖတ်နေတဲ့ Website နဲ့ တခြား app တွေ Game
+            တွေကို အမြဲပြပေးနေတဲ့ အရာပဲ။ အထူးသဖြင့်… ကျွန်ုပ်တို့ website
+            ကိုဖွင့်တဲ့အချိန်မှာ ဒီ ဆာဗာ ကနေ သင့် web content (HTML, images,
+            database info...) တို့ကို တုံ့ပြန်ပေးတယ်။
+          </p>
+
+          <h3>ဆာဗာအမျိုးအစားများ</h3>
+          <ul>
+            <li>Web Server (website ပြသ)</li>
+            <li>Database Server (data သိမ်းဆည်း)</li>
+            <li>Game Server (online multiplayer game)</li>
+            <li>File Server (file တွေကို share ပြုလုပ်)</li>
+          </ul>
+          <p>
+            ယုံကြည်စိတ်ချရတဲ့ စိတ်ချရတဲ့ ဆာဗာတွေဖြစ်တဲ့ AWS, Google Cloud နဲ့
+            Heroku တွေကိုအသုံးများတယ်။
+          </p>
+        </section>
+
+        <section>
+          <h2>ဆိုးကျိုးများနှင့် ထပ်မံဖြည့်စွမ်းရန်</h2>
+          <img
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"
+            alt="Illustration of gambling risks or warning sign"
+            width="600"
+          />
+          <p>
+            ဤအကြောင်းအရာသည် ဆက်လက်ရေးသားနေဆဲဖြစ်သည်။
+            အွန်လိုင်းလောင်းကစားဝက်ဘ်ဆိုက်များမှ သုံးစွဲသူများအတွက်
+            ဖြစ်ပေါ်လာနိုင်သော ဆိုးကျိုးများအကြောင်း နောက်ပိုင်းတွင်
+            ထပ်မံဖြည့်စွမ်းပေးပါမည်။
+          </p>
+        </section>
       </article>
     </main>
 
@@ -435,5 +611,19 @@
 
     <!-- Template Javascript -->
     <script src="../../js/main.js"></script>
+
+    <!-- View Counter JavaScript -->
+    <script>
+      // View Counter Logic
+      var counterContainer = document.querySelector(".view-counter .counter");
+      var viewCount = localStorage.getItem("page_view_blogs");
+      if (viewCount) {
+        viewCount = Number(viewCount) + 1;
+      } else {
+        viewCount = 1;
+      }
+      localStorage.setItem("page_view_blogs", viewCount);
+      counterContainer.innerHTML = viewCount;
+    </script>
   </body>
 </html>
