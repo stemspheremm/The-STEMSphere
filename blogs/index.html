@@ -2,13 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THSLZPKE4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-THSLZPKE4');
+    </script>
     <title>The STEMSphere : Blogs</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="../img/icon.png" rel="icon" />
+    <link href="../../img/icon.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,45 +51,166 @@
       rel="stylesheet"
     />
     <!-- Libraries Stylesheet -->
-    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="../../lib/animate/animate.min.css" rel="stylesheet" />
     <link
-      href="../lib/owlcarousel/assets/owl.carousel.min.css"
+      href="../../lib/owlcarousel/assets/owl.carousel.min.css"
       rel="stylesheet"
     />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+
+    <style>
+      /* Article-specific styles */
+      article {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      article img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+      }
+
+      article h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #57475b;
+        margin-bottom: 1rem;
+      }
+
+      article h2 {
+        font-size: 2rem;
+        color: #070707;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      article h3 {
+        font-size: 1.5rem;
+        color: #57475b;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      article h4 {
+        font-size: 1.25rem;
+        color: #57475b;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      article p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      article ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      article table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+      }
+
+      article th,
+      article td {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      article th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      article pre {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+      }
+
+      .article-header {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .author-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .author-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      .author-details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .author-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .article-meta {
+        font-size: 0.875rem;
+        color: #666;
+      }
+
+      .article-cta {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 0.01rem;
+      }
+
+      .cta-link {
+        text-decoration: underline;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .html-logo {
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        width: 200px;
+        height: auto;
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status"
-      >
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
-    <!-- Spinner End -->
-
     <!-- Navbar Start -->
     <nav
       class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
     >
       <a
-        href="../../STEMSphere Official Website/"
+        href="../../../STEMSphere Official Website/"
         class="navbar-brand d-flex align-items-center px-4 px-lg-5"
       >
         <p class="m-0 fw-" style="font-size: 25px">
-          <img src="../img/icon.png" alt="" height="70px" />
+          <img src="../../img/icon.png" alt="" height="70px" />
           <span
             style="
               color: #4b8adc;
@@ -102,33 +231,30 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="../../STEMSphere Official Website/index.html" class="nav-item nav-link"
-            ><i class="fa-solid fa-house"></i> &nbsp;Home</a
+          <a href="./" class="nav-item nav-link"
+            ><i class="fa-solid fa-house"></i> Home</a
           >
-          <a href="../about/index.html" class="nav-item nav-link"
-            ><i class="fa-solid fa-info-circle"></i> &nbsp;About</a
+          <a href="../../about/" class="nav-item nav-link"
+            ><i class="fa-solid fa-info-circle"></i> About</a
           >
-          <a href="../blogs/index.html" class="nav-item nav-link active"
-            ><i class="fa-solid fa-book-open-reader"></i>&nbsp; Blogs</a
+          <a href="../../blogs/" class="nav-item nav-link active"
+            ><i class="fa-solid fa-book-open-reader"></i> Blogs</a
           >
-          <a href="../community/index.html" class="nav-item nav-link"
-            ><i class="fa-solid fa-comments"></i>&nbsp; Community</a
+          <a href="../../community/" class="nav-item nav-link"
+            ><i class="fa-solid fa-comments"></i> Community</a
           >
-          <a href="../contact/index.html" class="nav-item nav-link"
-            ><i class="fa-solid fa-hands-helping"></i> &nbsp;Contact</a
+          <a href="../../contact/" class="nav-item nav-link"
+            ><i class="fa-solid fa-hands-helping"></i> Contact</a
           >
-
           <a href="login.html" class="nav-item nav-link" target="_blank">
             <i class="fa fa-graduation-cap"></i>
             <span class="nav-text">Learn</span>
           </a>
-
           <div id="google_translate_element"></div>
         </div>
       </div>
     </nav>
     <!-- Navbar End -->
-
     <style>
       /* Hide text by default (for desktop) */
       .nav-text {
@@ -144,625 +270,283 @@
       }
     </style>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center">
-            <h1 class="display-3 text-white animated slideInDown">Blogs</h1>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item">
-                  <a
-                    class="text-white"
-                    href="../../STEMSphere Official Website/"
-                    >Home</a
-                  >
-                </li>
-                <li
-                  class="breadcrumb-item text-white active"
-                  aria-current="page"
-                >
-                  Blogs
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </div>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <!-- Header End -->
+    <!-- Spinner End -->
 
-    <section id="feature" class="section-p1">
-      <h2>Discover our connection between Literature and STEM!</h2>
-      <div class="fe-box-container">
-        <div class="fe-box">
-          <a class="nav-link text-uppercase text-white" href="#section-1">
-            <img src="../img/Science.svg" alt="Science" />
-            <h6>Science</h6>
-          </a>
-        </div>
-        <div class="fe-box">
-          <a class="nav-link text-uppercase text-dark" href="#section-2">
-            <img src="../img/Tech.svg" alt="Technology" />
-            <h6>Technology</h6>
-          </a>
-        </div>
-        <div class="fe-box">
-          <a class="nav-link text-uppercase text-dark" href="#section-3">
-            <img src="../img/Engineering.svg" alt="Engineering" />
-            <h6>Engineering</h6>
-          </a>
-        </div>
-        <div class="fe-box">
-          <a class="nav-link text-uppercase text-dark" href="#section-4">
-            <img src="../img/Maths.svg" alt="Mathematics" />
-            <h6>Mathematics</h6>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <style>
-      #feature {
-        padding: 60px 20px; /* Increased top/bottom padding */
-        text-align: center; /* Center all content */
-      }
-
-      #feature h2 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 40px; /* Space between header and boxes */
-      }
-
-      #feature .fe-box-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px; /* Increased gap for better spacing */
-      }
-
-      #feature .fe-box {
-        width: 200px; /* Slightly larger boxes for better appearance */
-        text-align: center;
-        padding: 25px 20px; /* Increased padding for more internal space */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        border: 1px solid #4cb7fd;
-        border-radius: 8px; /* Slightly larger radius for modern look */
-        display: flex; /* Flex to center h6 */
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center content horizontally */
-      }
-
-      #feature .fe-box:hover {
-        box-shadow: 0 4px 15px rgba(70, 62, 221, 0.1);
-        transform: translateY(-5px); /* Subtle lift effect on hover */
-        transition: all 0.3s ease; /* Smooth transition */
-      }
-
-      #feature .fe-box img {
-        width: 100%;
-        margin-bottom: 15px; /* More space below image */
-      }
-
-      #feature .fe-box h6 {
-        display: inline-block;
-        padding: 10px 15px; /* Slightly larger padding */
-        line-height: 1.2;
-        border-radius: 4px;
-        color: #0b0b0b;
-        background-color: #bce3fa;
-        margin: 0 auto; /* Center h6 horizontally */
-      }
-
-      #feature .fe-box:nth-child(2) h6 {
-        background-color: #f3fb9a;
-      }
-      #feature .fe-box:nth-child(3) h6 {
-        background-color: #a9efa6;
-      }
-      #feature .fe-box:nth-child(4) h6 {
-        background-color: #f78c9c;
-      }
-
-      #feature .fe-box:nth-child(5) h6,
-      #feature .fe-box:nth-child(6) h6 {
-        display: none;
-      }
-
-      @media (max-width: 799px) {
-        .section-p1 {
-          padding: 40px 20px;
-        }
-        #feature .fe-box-container {
-          gap: 20px;
-        }
-        #feature .fe-box {
-          width: 180px;
-        }
-      }
-
-      @media (max-width: 477px) {
-        .section-p1 {
-          padding: 30px 15px;
-        }
-        #feature h2 {
-          font-size: 2rem;
-        }
-        #feature .fe-box {
-          width: 160px;
-          padding: 20px 15px;
-        }
-      }
-    </style>
-
-   <!-- Blog Section -->
-<div id="section-1">
-  <section class="blog-section">
-    <h2 class="section-header">Science Blogs</h2>
-    <div class="b1" id="blogs">
-      <a href="./blog1/" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-article">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
+    <main>
+      <article>
+        <div class="article-header">
+          <div class="author-info">
+            <img src="blogs/3.jpg" alt="Author Image" class="author-image" />
+            <div class="author-details">
+              <span class="author-name">Lena Sernoff</span>
+              <span class="article-meta">Student</span>
             </div>
           </div>
+          <p class="article-cta">March 25, 2025</p>
+          <p class="article-cta">ဆောင်းပါး</p>
+          <span class="yellow-decor"></span>
         </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-story">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-letter">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-</div>
-<!-- 1 END -->
 
-<!-- 2 Start -->
-<div id="section-2">
-  <section class="blog-section">
-    <h2 class="section-header">Technology Blogs</h2>
-    <div class="b1" id="blogs">
-      <a href="./blog1/" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-article">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-story">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-letter">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-</div>
-<!-- 2 END -->
+        <h1>အွန်လိုင်း လောင်းကစားဝက်ဘ်ဆိုက် တွေကိုဘယ်လိုလုပ်လဲ။</h1>
+        <p>
+          ပထမဦးဆုံး ဝက်ဆိုက် ဖန်တီးရာမှာ လိုအပ်တဲ့ နည်းပညာအချက်လက်နဲ့
+          နောက်ပိုင်း သုံးဆွဲသူတွေအတွက် ဘယ်လိုဆိုးကျိုး ဖြစ်ပေါ်လဲ
+          အသေးစိတ်ပြောပေးမယ်။ အဆုံးထိဖတ်ပေးဖို့ တောင်းဆိုပါတယ်။
+        </p>
 
-<!-- 3 Start -->
-<div id="section-3">
-  <section class="blog-section">
-    <h2 class="section-header">Engineering Blogs</h2>
-    <div class="b1" id="blogs">
-      <a href="./blog1/" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-article">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-story">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-letter">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-</div>
-<!-- 3 END -->
+        <section>
+          <!-- Front-End Image -->
+          <img
+            src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
+            alt="HTML and CSS logos representing Front-End development"
+            width="600"
+          />
 
-<!-- 4 Start -->
-<div id="section-4">
-  <section class="blog-section">
-    <h2 class="section-header">Mathematics Blogs</h2>
-    <div class="b1" id="blogs">
-      <a href="./blog1/" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-article">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-story">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="blog-post-1.html" target="_blank">
-        <div class="b1-item">
-          <div class="b1-item-header">
-            <img src="blogs/1.jpg" alt="rover" />
-          </div>
-          <div class="b1-item-body">
-            <span class="b1-tag b1-tag-letter">Technology</span>
-            <h4>အွန်လိုင်း</h4>
-            <p>အွန်လိုင်းအလောင်းကစား web ဖန်တီးခြင်း</p>
-            <div class="b1-user">
-              <img src="blogs/3.jpg" alt="user" />
-              <div class="b1-user-info">
-                <h5>ဝေလျံ</h5>
-                <small>Student</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-</div>
-<!-- 4 END -->
+          <p>
+            ဝက်ဆိုက် ဖန်တီးဖို့က လိုအပ်တဲ့ နည်းပညာက အားလုံးသိတဲ့အတိုင်း
+            Front-End နဲ့ Back-End ရယ် သုံးဆွဲသူတွေရဲ့
+            အချက်အလက်တွေကိုသိမ်းဆည်းထားတဲ့ Database ရယ်ဆိုပြီး သုံးခုရှိမယ်။
+          </p>
 
-    <style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+          <h3>Front-End နည်းပညာ</h3>
+          <p>
+            Front-End ပိုင်းက သုံဆွဲသူတွေဘက်မှာ ကြည့်လို့ရမယ့် Design
+            ပုံစံတွေနဲ့လာမယ်။ အသုံးပြုတဲ့ Tools တွေကတော့ HTML, Css, JavaScript
+            တို့နဲ့ အပြန်အလှန်အကျိုးသက်ရောက်ဖို့ React.js ဒါမဟုတ် Vue.js တို့နဲ့
+            ဖွဲ့စည်းထားမယ်။
+          </p>
 
-/* Blog Section Header */
-.blog-section {
-  padding: 40px 0;
-  text-align: center;
-  margin-bottom: 60px; /* Space between sections */
+          <h3>Back-End နည်းပညာ</h3>
+          <img
+            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
+            alt="Server room for Back-End development"
+            width="600"
+          />
+
+          <p>
+            Back-End အပိုင်းကတော့ Developer တွေနဲ့ပဲ ဆိုင်သွားပြီ။
+            သုံးဆွဲသူတွေဘက်က ဘာမှလုပ်လို့ရမှာမဟုတ်ဘူး။ အသုံးဆွဲသူတွေ
+            လုပ်ဆောင်ပုံတွေနဲ့ အချက်အလက်တွေကို Database ဆီပေးပို့တဲ့အရာလည်း
+            ဖြစ်တယ်။ အသုံးပြုတဲ့ tools အများစုကတော့ Node.js, Ruby, Java နဲ့
+            Python (Django, Flask)။
+          </p>
+
+          <h3>Database နည်းပညာ</h3>
+          <img
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"
+            alt="Infographic comparing Relational vs Non-Relational databases"
+            width="800"
+          />
+
+          <p>
+            Database ကကြတော့ Back-End ကနေပေးပို့လိုက်ပြီဆိုရင် သူကသိမ်းဆည်းဖို့
+            နေရာတစ်ခု။ အွန်လိုင်း အလောင်းကစား Website မှာဆိုရင် သုံးစွဲသူရဲ့
+            ကိုယ်ရေးကိုယ်တာအချက်အလက်၊ ငွေသွင်း၊ ငွေထုတ် မှတ်တမ်း၊ ငွေကြေး
+            တွေပါမယ်။ သူမှာ Relational Database နဲ့ Non-Relational Database
+            ဆိုပြီး နှစ်မျိုးရှိသေးတယ်။
+          </p>
+
+          <h4>Relational vs Non-Relational Database</h4>
+          <p>ကွဲပြားပုံက:</p>
+          <ul>
+            <li>
+              <strong>Relational Database</strong>: Column headers (ဥပမာ - Name,
+              Email, age) အဲ့တာတွေရဲ့အောက်က မှ Data (rows) မှာ format
+              နဲ့ထည့်ရတယ်။
+            </li>
+            <li>
+              <strong>Non-Relational Database</strong>:
+              ဘာပုံစံဖြစ်ဖြစ်သိမ်းလို့ရတယ်။ (Structure တွေမကန့်သတ်ဘူး)
+              တစ်ယောက်နဲ့တစ်ယောက်က Data format မတူလို့ရတယ်။ JSON စနစ်နဲ့
+              သိမ်းတာများတယ်။ ထည့်ချင်တာထည့်၊ မရှိတာကျော်သွား
+            </li>
+          </ul>
+
+          <h4>Relational Database Example</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Aung Aung</td>
+                <td>aung@gmail.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Hla Hla</td>
+                <td>hla@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Non-Relational Database Example</h4>
+          <pre>
+{
+    "name": "Aung Aung",
+    "email": "aung@gmail.com",
+    "age": 25
 }
-
-.blog-section:last-child {
-  margin-bottom: 0; /* Remove margin from the last section */
+{
+    "name": "Hla Hla",
+    "phone": "0912345678",
+    "address": "Yangon"
 }
+          </pre>
 
-.section-header {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2rem; /* Increased for emphasis */
-  font-weight: 400;
-  color: #333;
-  margin-bottom: 30px;
-  display: inline-block;
-  padding: 12px 20px; /* Slightly larger padding */
-  line-height: 1.2;
-  border-radius: 4px;
-  color: #000101;
-}
+          <p>
+            အွန်လိုင်းအလောင်းကစား ဝက်ဆိုက်တွေမှာကြတော့ Relational Database (SQL)
+            သုံးတာများတယ်။
+          </p>
+          <h4>အကြောင်းရင်းများ</h4>
+          <ul>
+            <li>
+              ငွေကြေး / user account / bet history တွေကို သေသပ်စနစ်တကျ
+              သိမ်းဖို့လိုတယ်
+            </li>
+            <li>Accuracy (မှန်ကန်မှု) အလွန်အရေးကြီးတယ်</li>
+            <li>
+              SQL DB တွေက transaction-based ဖြစ်လို့ သွင်းထုတ်လုပ်ငန်းစဉ်တွေကို
+              ခိုင်မာစွာထိန်းချုပ်နိုင်တယ်။
+            </li>
+          </ul>
 
-/* Unique header colors for each section */
-#section-1 .section-header {
-  background-color: #bce3fa;
-}
+          <h4>အသုံးများသော SQL Databases</h4>
+          <ul>
+            <li>PostgreSQL (open-source, performance & security ဗလိမ့်)</li>
+            <li>MySQL / MariaDB (ကျယ်ပြန့်ပြီး lightweight)</li>
+            <li>Oracle (စီးပွားရေးအဆင့် မြင့်မားတဲ့လူကြိုက်များတယ်)</li>
+            <li>Microsoft SQL Server (အများစု Windows Server များအတွက်)</li>
+          </ul>
 
-#section-2 .section-header {
-  background-color: #f3fb9a;
-}
+          <h4>NoSQL Database အသုံးပြုမှု</h4>
+          <p>တစ်ခါတစ်ရံ NoSQL DB သုံးတာလဲ တွေရတယ်။ အထူးသဖြင့်:</p>
+          <ul>
+            <li>Realtime leaderboard</li>
+            <li>Logs / tracking data (user behavior, traffic log)</li>
+            <li>Game state caching</li>
+          </ul>
 
-#section-3 .section-header {
-  background-color: #a9efa6;
-}
+          <h4>အသုံးများသော NoSQL Databases</h4>
+          <ul>
+            <li>MongoDB – Flexible data, JSON-like structure</li>
+            <li>Redis – အမြန်ဆုံး caching, in-memory database</li>
+            <li>Cassandra – Big data & high availability</li>
+          </ul>
+        </section>
 
-#section-4 .section-header {
-  background-color: #f78c9c;
-}
+        <section>
+          <h2>Tech Stack အကျဉ်းချုပ်</h2>
+          <img
+            src="https://images.unsplash.com/photo-1548092372-0d5bd4086c04"
+            alt="Diagram of tech stack with Frontend, Backend, and Database components"
+            width="800"
+          />
 
-.b1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px; /* Increased to accommodate larger items */
-  margin: 0 auto;
-  gap: 30px; /* Reduced gap to fit larger items */
-  padding: 20px;
-}
+          <table>
+            <thead>
+              <tr>
+                <th>Part</th>
+                <th>Example Tech</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frontend</td>
+                <td>React, Angular, Vue.js</td>
+              </tr>
+              <tr>
+                <td>Backend</td>
+                <td>Node.js, PHP (Laravel), Java (Spring), Python (Django)</td>
+              </tr>
+              <tr>
+                <td>Database (Main)</td>
+                <td>PostgreSQL, MySQL, Oracle</td>
+              </tr>
+              <tr>
+                <td>Database (Supporting)</td>
+                <td>Redis (caching), MongoDB (logging), Cassandra</td>
+              </tr>
+              <tr>
+                <td>Authentication & Security</td>
+                <td>JWT, OAuth, 2FA, Encryption</td>
+              </tr>
+              <tr>
+                <td>Payment Integration</td>
+                <td>Stripe, PayPal, Crypto wallets, Bank API</td>
+              </tr>
+              <tr>
+                <td>Local Payment</td>
+                <td>Kpay, Wave pay, KBZ Bank</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-.b1-item {
-  background-color: #fff;
-  border-radius: 12px; /* Slightly larger border radius */
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
-  overflow: hidden;
-  width: calc(33.33% - 20px); /* Adjusted for 3 items per row with new gap */
-  min-width: 300px; /* Increased minimum width for larger items */
-}
+        <section>
+          <h2>ဆာဗာနဲ့ Hosting</h2>
+          <img
+            src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg"
+            alt="Cloud server infrastructure for hosting"
+            width="800"
+          />
 
-/* Ensure the <a> tag wraps properly */
-.b1 a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
+          <p>
+            ဆာဗာဆိုတာက ခင်များတို့ အခုဖတ်နေတဲ့ Website နဲ့ တခြား app တွေ Game
+            တွေကို အမြဲပြပေးနေတဲ့ အရာပဲ။ အထူးသဖြင့်… ကျွန်ုပ်တို့ website
+            ကိုဖွင့်တဲ့အချိန်မှာ ဒီ ဆာဗာ ကနေ သင့် web content (HTML, images,
+            database info...) တို့ကို တုံ့ပြန်ပေးတယ်။
+          </p>
 
-/* Hover effect for the entire item */
-.b1 a:hover .b1-item {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-}
+          <h3>ဆာဗာအမျိုးအစားများ</h3>
+          <ul>
+            <li>Web Server (website ပြသ)</li>
+            <li>Database Server (data သိမ်းဆည်း)</li>
+            <li>Game Server (online multiplayer game)</li>
+            <li>File Server (file တွေကို share ပြုလုပ်)</li>
+          </ul>
 
-.b1-item-header {
-  min-height: 250px; /* Increased for larger images */
-  background-color: #f5f5f5;
-}
+          <p>
+            ယုံကြည်စိတ်ချရတဲ့ စိတ်ချရတဲ့ ဆာဗာတွေဖြစ်တဲ့ AWS, Google Cloud နဲ့
+            Heroku တွေကိုအသုံးများတယ်။
+          </p>
+        </section>
 
-.b1-item-header img {
-  width: 100%;
-  height: 250px; /* Larger images */
-  object-fit: cover;
-}
+        <section>
+          <h2>ဆိုးကျိုးများနှင့် ထပ်မံဖြည့်စွမ်းရန်</h2>
+          <img
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"
+            alt="Illustration of gambling risks or warning sign"
+            width="600"
+          />
 
-.b1-item-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 25px; /* Increased padding */
-  min-height: 300px; /* Increased for more content space */
-}
-
-.b1-tag {
-  background: #cccccc;
-  border-radius: 50px;
-  font-size: 14px; /* Slightly larger */
-  color: #fff;
-  padding: 4px 12px; /* Larger padding */
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-.b1-tag-article {
-  background-color: #60dde9;
-}
-
-.b1-tag-story {
-  background-color: #8dacf5;
-}
-
-.b1-tag-letter {
-  background-color: #cd5b9f;
-}
-
-.b1-tag-poem {
-  background-color: #f0b659;
-}
-
-.b1-tag-essay {
-  background-color: #47f088;
-}
-
-.b1-item-body h4 {
-  margin-bottom: 30px;
-  font-size: 22px; /* Larger title */
-  font-weight: 600;
-  text-align: left;
-}
-
-.b1-item-body h4 a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.b1-item-body h4 a:hover {
-  color: #cd270a;
-}
-
-.b1-item-body p {
-  font-size: 15px; /* Larger text */
-  margin-bottom: 30px;
-  color: #333;
-  text-align: left;
-}
-
-.b1-user {
-  display: flex;
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-.b1-user img {
-  border-radius: 50%;
-  width: 50px; /* Larger avatar */
-  height: 50px;
-  margin-right: 12px;
-}
-
-.b1-user-info h5 {
-  margin: 0;
-  font-size: 16px; /* Larger name */
-  font-weight: 500;
-  text-align: left;
-}
-
-.b1-user-info small {
-  color: #545d7a;
-  font-size: 13px; /* Slightly larger */
-  text-align: left;
-}
-
-/* Default: 3 items per row (desktops and larger tablets) */
-.b1-item {
-  width: calc(33.33% - 20px);
-}
-
-/* Medium devices: 2 items per row (smaller tablets) */
-@media (max-width: 900px) {
-  .b1-item {
-    width: calc(50% - 15px); /* Adjusted for 2 items with gap */
-  }
-}
-
-/* Small devices: 1 item per row (phones) */
-@media (max-width: 600px) {
-  .b1-item {
-    width: 100%;
-  }
-}
-    
-    </style>
-    <!--End Blogs section-->
+          <p>
+            ဤအကြောင်းအရာသည် ဆက်လက်ရေးသားနေဆဲဖြစ်သည်။
+            အွန်လိုင်းလောင်းကစားဝက်ဘ်ဆိုက်များမှ သုံးစွဲသူများအတွက်
+            ဖြစ်ပေါ်လာနိုင်သော ဆိုးကျိုးများအကြောင်း နောက်ပိုင်းတွင်
+            ထပ်မံဖြည့်စွမ်းပေးပါမည်။
+          </p>
+        </section>
+      </article>
+    </main>
 
     <!-- Footer Start -->
     <footer>
@@ -838,17 +622,15 @@
     </footer>
     <!-- Footer End -->
 
-    <!-- Back to Top -->
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
+    <script src="../../js/main.js"></script>
   </body>
 </html>
