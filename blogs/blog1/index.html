@@ -2,18 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THSLZPKE4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-THSLZPKE4');
-    </script>
     <title>The STEMSphere : Blogs</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="STEM, technology, blogs, education" />
+    <meta name="description" content="Explore tech insights and blogs on The STEMSphere platform." />
 
     <!-- Favicon -->
     <link href="../../img/icon.png" rel="icon" />
@@ -21,47 +13,30 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Icon Font Stylesheet (Using latest versions only) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
     <!-- Libraries Stylesheet -->
     <link href="../../lib/animate/animate.min.css" rel="stylesheet" />
-    <link
-      href="../../lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
+    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
     <link href="../../css/style.css" rel="stylesheet" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','G-THSLZPWKE4');</script>
+    <!-- End Google Tag Manager -->
 
     <style>
       /* Article-specific styles */
@@ -70,73 +45,62 @@
         margin: 0 auto;
         padding: 2rem;
       }
-
       article img {
         max-width: 100%;
         height: auto;
         display: block;
         margin: 1rem auto;
       }
-
       article h1 {
         font-size: 2.5rem;
         font-weight: 900;
         color: #57475b;
         margin-bottom: 1rem;
       }
-
       article h2 {
         font-size: 2rem;
         color: #070707;
         margin-top: 2rem;
         margin-bottom: 1rem;
       }
-
       article h3 {
         font-size: 1.5rem;
         color: #57475b;
         margin-top: 1.5rem;
         margin-bottom: 0.75rem;
       }
-
       article h4 {
         font-size: 1.25rem;
         color: #57475b;
         margin-top: 1rem;
         margin-bottom: 0.5rem;
       }
-
       article p {
         font-size: 1rem;
         line-height: 1.8;
         color: #333;
         margin-bottom: 1rem;
       }
-
       article ul {
         list-style-type: disc;
         padding-left: 2rem;
         margin-bottom: 1rem;
       }
-
       article table {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 1rem;
       }
-
       article th,
       article td {
         border: 1px solid #ddd;
         padding: 0.75rem;
         text-align: left;
       }
-
       article th {
         background-color: #f8f9fa;
         font-weight: bold;
       }
-
       article pre {
         background-color: #f8f9fa;
         padding: 1rem;
@@ -144,108 +108,65 @@
         overflow-x: auto;
         margin-bottom: 1rem;
       }
-
       .article-header {
         position: relative;
         margin-bottom: 2rem;
       }
-
       .author-info {
         display: flex;
         align-items: center;
         margin-bottom: 1rem;
       }
-
       .author-image {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         margin-right: 1rem;
       }
-
       .author-details {
         display: flex;
         flex-direction: column;
       }
-
       .author-name {
         font-size: 1rem;
         font-weight: 600;
         color: #333;
       }
-
       .article-meta {
         font-size: 0.875rem;
         color: #666;
       }
-
       .article-cta {
         font-size: 1rem;
         color: #333;
         margin-bottom: 0.01rem;
       }
-
       .cta-link {
         text-decoration: underline;
         color: #333;
         font-weight: 500;
       }
-
-      .html-logo {
-        position: absolute;
-        bottom: -50px;
-        right: 0;
-        width: 200px;
-        height: auto;
-      }
     </style>
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
-    >
-      <a
-        href="../../../STEMSphere Official Website/"
-        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
-      >
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+      <a href="../../../STEMSphere Official Website/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <p class="m-0 fw-" style="font-size: 25px">
           <img src="../../img/icon.png" alt="" height="70px" />
-          <span
-            style="
-              color: #4b8adc;
-              font-weight: 500;
-              font-family: 'Lato', sans-serif;
-            "
-            >STEMSphere</span
-          >
+          <span style="color: #4b8adc; font-weight: 500; font-family: 'Lato', sans-serif">STEMSphere</span>
         </p>
       </a>
-      <button
-        type="button"
-        class="navbar-toggler me-4"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="./" class="nav-item nav-link"
-            ><i class="fa-solid fa-house"></i> Home</a
-          >
-          <a href="../../about/" class="nav-item nav-link"
-            ><i class="fa-solid fa-info-circle"></i> About</a
-          >
-          <a href="../../blogs/" class="nav-item nav-link active"
-            ><i class="fa-solid fa-book-open-reader"></i> Blogs</a
-          >
-          <a href="../../community/" class="nav-item nav-link"
-            ><i class="fa-solid fa-comments"></i> Community</a
-          >
-          <a href="../../contact/" class="nav-item nav-link"
-            ><i class="fa-solid fa-hands-helping"></i> Contact</a
-          >
+          <a href="./" class="nav-item nav-link"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="../../about/" class="nav-item nav-link"><i class="fa-solid fa-info-circle"></i> About</a>
+          <a href="../../blogs/" class="nav-item nav-link active"><i class="fa-solid fa-book-open-reader"></i> Blogs</a>
+          <a href="../../community/" class="nav-item nav-link"><i class="fa-solid fa-comments"></i> Community</a>
+          <a href="../../contact/" class="nav-item nav-link"><i class="fa-solid fa-hands-helping"></i> Contact</a>
           <a href="login.html" class="nav-item nav-link" target="_blank">
             <i class="fa fa-graduation-cap"></i>
             <span class="nav-text">Learn</span>
@@ -260,7 +181,6 @@
       .nav-text {
         display: none;
       }
-
       /* Show text on mobile screens */
       @media (max-width: 991px) {
         .nav-text {
@@ -271,15 +191,8 @@
     </style>
 
     <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status"
-      >
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
         <span class="sr-only">Loading...</span>
       </div>
     </div>
@@ -297,7 +210,6 @@
           </div>
           <p class="article-cta">March 25, 2025</p>
           <p class="article-cta">ဆောင်းပါး</p>
-          <span class="yellow-decor"></span>
         </div>
 
         <h1>အွန်လိုင်း လောင်းကစားဝက်ဘ်ဆိုက် တွေကိုဘယ်လိုလုပ်လဲ။</h1>
@@ -309,12 +221,7 @@
 
         <section>
           <!-- Front-End Image -->
-          <img
-            src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
-            alt="HTML and CSS logos representing Front-End development"
-            width="600"
-          />
-
+          <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="HTML and CSS logos representing Front-End development" width="600" />
           <p>
             ဝက်ဆိုက် ဖန်တီးဖို့က လိုအပ်တဲ့ နည်းပညာက အားလုံးသိတဲ့အတိုင်း
             Front-End နဲ့ Back-End ရယ် သုံးဆွဲသူတွေရဲ့
@@ -330,12 +237,7 @@
           </p>
 
           <h3>Back-End နည်းပညာ</h3>
-          <img
-            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
-            alt="Server room for Back-End development"
-            width="600"
-          />
-
+          <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="Server room for Back-End development" width="600" />
           <p>
             Back-End အပိုင်းကတော့ Developer တွေနဲ့ပဲ ဆိုင်သွားပြီ။
             သုံးဆွဲသူတွေဘက်က ဘာမှလုပ်လို့ရမှာမဟုတ်ဘူး။ အသုံးဆွဲသူတွေ
@@ -345,12 +247,7 @@
           </p>
 
           <h3>Database နည်းပညာ</h3>
-          <img
-            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"
-            alt="Infographic comparing Relational vs Non-Relational databases"
-            width="800"
-          />
-
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485" alt="Infographic comparing Relational vs Non-Relational databases" width="800" />
           <p>
             Database ကကြတော့ Back-End ကနေပေးပို့လိုက်ပြီဆိုရင် သူကသိမ်းဆည်းဖို့
             နေရာတစ်ခု။ အွန်လိုင်း အလောင်းကစား Website မှာဆိုရင် သုံးစွဲသူရဲ့
@@ -425,7 +322,7 @@
             <li>Accuracy (မှန်ကန်မှု) အလွန်အရေးကြီးတယ်</li>
             <li>
               SQL DB တွေက transaction-based ဖြစ်လို့ သွင်းထုတ်လုပ်ငန်းစဉ်တွေကို
-              ခိုင်မာစွာထိန်းချုပ်နိုင်တယ်။
+              ခိုင်မာစွာထိန်းချုပ်နိုင်တရထူး
             </li>
           </ul>
 
@@ -455,12 +352,7 @@
 
         <section>
           <h2>Tech Stack အကျဉ်းချုပ်</h2>
-          <img
-            src="https://images.unsplash.com/photo-1548092372-0d5bd4086c04"
-            alt="Diagram of tech stack with Frontend, Backend, and Database components"
-            width="800"
-          />
-
+          <img src="https://images.unsplash.com/photo-1548092372-0d5bd4086c04" alt="Diagram of tech stack with Frontend, Backend, and Database components" width="800" />
           <table>
             <thead>
               <tr>
@@ -503,12 +395,7 @@
 
         <section>
           <h2>ဆာဗာနဲ့ Hosting</h2>
-          <img
-            src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg"
-            alt="Cloud server infrastructure for hosting"
-            width="800"
-          />
-
+          <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg" alt="Cloud server infrastructure for hosting" width="800" />
           <p>
             ဆာဗာဆိုတာက ခင်များတို့ အခုဖတ်နေတဲ့ Website နဲ့ တခြား app တွေ Game
             တွေကို အမြဲပြပေးနေတဲ့ အရာပဲ။ အထူးသဖြင့်… ကျွန်ုပ်တို့ website
@@ -523,7 +410,6 @@
             <li>Game Server (online multiplayer game)</li>
             <li>File Server (file တွေကို share ပြုလုပ်)</li>
           </ul>
-
           <p>
             ယုံကြည်စိတ်ချရတဲ့ စိတ်ချရတဲ့ ဆာဗာတွေဖြစ်တဲ့ AWS, Google Cloud နဲ့
             Heroku တွေကိုအသုံးများတယ်။
@@ -532,12 +418,7 @@
 
         <section>
           <h2>ဆိုးကျိုးများနှင့် ထပ်မံဖြည့်စွမ်းရန်</h2>
-          <img
-            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"
-            alt="Illustration of gambling risks or warning sign"
-            width="600"
-          />
-
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485" alt="Illustration of gambling risks or warning sign" width="600" />
           <p>
             ဤအကြောင်းအရာသည် ဆက်လက်ရေးသားနေဆဲဖြစ်သည်။
             အွန်လိုင်းလောင်းကစားဝက်ဘ်ဆိုက်များမှ သုံးစွဲသူများအတွက်
@@ -552,72 +433,22 @@
     <footer>
       <div class="footer-container">
         <div class="icon-row">
-          <a
-            href="https://www.facebook.com/TheSTEMSphere"
-            target="_blank"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a
-            href="https://t.me/stemspheremm"
-            target="_blank"
-            aria-label="Telegram"
-            ><i class="fab fa-telegram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/company/stem-sphere/"
-            target="_blank"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a
-            href="https://youtube.com/@thestemsphere"
-            target="_blank"
-            aria-label="YouTube"
-            ><i class="fab fa-youtube"></i
-          ></a>
-          <a
-            href="https://discord.com/invite/8w9695ggBF"
-            target="_blank"
-            aria-label="Discord"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
+          <a href="https://www.facebook.com/TheSTEMSphere" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://t.me/stemspheremm" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://www.linkedin.com/company/stem-sphere/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://youtube.com/@thestemsphere" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://discord.com/invite/8w9695ggBF" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
         </div>
         <div class="icon-row">
-          <a
-            href="https://www.instagram.com/stemspheremm/"
-            target="_blank"
-            aria-label="Instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://x.com/stemsphere" target="_blank" aria-label="X"
-            ><i class="bi bi-twitter-x"></i
-          ></a>
-          <a
-            href="https://medium.com/@stemsphere"
-            target="_blank"
-            aria-label="Medium"
-            ><i class="fab fa-medium"></i
-          ></a>
-          <a
-            href="https://github.com/stem-sphere"
-            target="_blank"
-            aria-label="GitHub"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.tiktok.com/@stemsphere"
-            target="_blank"
-            aria-label="TikTok"
-            ><i class="fab fa-tiktok"></i
-          ></a>
+          <a href="https://www.instagram.com/stemspheremm/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/stemsphere" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://medium.com/@stemsphere" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
+          <a href="https://github.com/stem-sphere" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.tiktok.com/@stemsphere" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
       <div class="footer-bottom">
-        <a
-          >© 2025 The STEMSphere. All rights reserved. Developed by Aung Wai
-          Phyo</a
-        >
+        <a>© 2025 The STEMSphere. All rights reserved. Developed by Aung Wai Phyo</a>
       </div>
     </footer>
     <!-- Footer End -->
